@@ -10,7 +10,8 @@ As a user ...
   - I want to have the ability to edit and delete a task
   - I want to be able to check a task as complete when it is done
 
-![Screen Shot 2022-04-19 at 3 09 05 PM](https://user-images.githubusercontent.com/94028875/164109919-ae2cb9b4-3d1c-4f63-90ab-83c719292d8f.png)
+![Screen Shot 2022-04-19 at 3 55 56 PM](https://user-images.githubusercontent.com/94028875/164114539-1bb09c2d-1183-4188-9554-30304608a6c8.png)
+
 ![Screen Shot 2022-04-19 at 2 52 24 PM](https://user-images.githubusercontent.com/94028875/164108042-a3ec7bb8-b52b-4d4d-ae9d-e0a75d54b43a.png)
 ![Screen Shot 2022-04-19 at 2 52 38 PM](https://user-images.githubusercontent.com/94028875/164108075-962f22d7-fd5e-43c4-9581-f0110978f9e4.png)
 ![Screen Shot 2022-04-19 at 2 52 48 PM](https://user-images.githubusercontent.com/94028875/164108104-a6266b1d-55ad-438d-a9b3-7e1a15fc4c3d.png)
