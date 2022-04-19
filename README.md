@@ -9,8 +9,10 @@ As a user ...
   - I want to have the ability to input different tasks 
   - I want to have the ability to edit and delete a task
   - I want to be able to check a task as complete when it is done
+  - I want to have the ability to categorize my tasks
 
-![Screen Shot 2022-04-19 at 3 55 56 PM](https://user-images.githubusercontent.com/94028875/164114539-1bb09c2d-1183-4188-9554-30304608a6c8.png)
+![Screen Shot 2022-04-19 at 4 03 58 PM](https://user-images.githubusercontent.com/94028875/164115275-0073a29d-8615-4392-8e8a-a390df6e86cf.png)
+
 
 ![Screen Shot 2022-04-19 at 2 52 24 PM](https://user-images.githubusercontent.com/94028875/164108042-a3ec7bb8-b52b-4d4d-ae9d-e0a75d54b43a.png)
 ![Screen Shot 2022-04-19 at 4 00 44 PM](https://user-images.githubusercontent.com/94028875/164114982-52be80db-2560-4c0b-b769-77910da7f04c.png)
