@@ -13,7 +13,8 @@ As a user ...
 ![Screen Shot 2022-04-19 at 3 55 56 PM](https://user-images.githubusercontent.com/94028875/164114539-1bb09c2d-1183-4188-9554-30304608a6c8.png)
 
 ![Screen Shot 2022-04-19 at 2 52 24 PM](https://user-images.githubusercontent.com/94028875/164108042-a3ec7bb8-b52b-4d4d-ae9d-e0a75d54b43a.png)
-![Screen Shot 2022-04-19 at 2 52 38 PM](https://user-images.githubusercontent.com/94028875/164108075-962f22d7-fd5e-43c4-9581-f0110978f9e4.png)
+![Screen Shot 2022-04-19 at 3 57 14 PM (2)](https://user-images.githubusercontent.com/94028875/164114813-e72a04a3-efaf-44a3-90a2-cbf799529b7f.png)
+![Screen Shot 2022-04-19 at 3 57 22 PM](https://user-images.githubusercontent.com/94028875/164114829-0498b878-8476-451d-939b-350b30b72136.png)
 ![Screen Shot 2022-04-19 at 2 52 48 PM](https://user-images.githubusercontent.com/94028875/164108104-a6266b1d-55ad-438d-a9b3-7e1a15fc4c3d.png)
 ![Screen Shot 2022-04-19 at 2 52 58 PM](https://user-images.githubusercontent.com/94028875/164108122-e4103f6e-5c9a-4721-b76b-4715ffd81384.png)
 
