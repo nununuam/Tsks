@@ -8,4 +8,12 @@ from django.http import HttpResponse
 
 class Home(View):
     def get(self, request):
-        return HttpResponse("Tsks Home")
+        return HttpResponse("Welcome to Tsks")
+
+class Tasks(View):
+    def get(self, request):
+        return HttpResponse("Tasks Page")
+
+class addCategories(View):
+    def get(self, request):
+        return HttpResponse("New Categories")
