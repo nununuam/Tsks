@@ -6,4 +6,5 @@ urlpatterns = [
     path('', views.Home.as_view(), name="home"),
     path('tasks/', views.Tasks.as_view(), name="tasks"),
     path('addCategories/', views.addCategories.as_view(), name="categories"),
+    path('SumerBal/', views.SumerBal.as_view(), name="SumerBal"),
 ]
