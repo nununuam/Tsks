@@ -18,7 +18,10 @@ class addCategories(View):
     def get(self, request):
         return HttpResponse("New Categories")
         
-
-class SumerBal(View):
+class NewTask(View):
     def get(self, request):
-        return HttpResponse("You have a great sense of fashonnnn!!!!!!!")
+        return HttpResponse("New Task Page")
+
+class editAndDelete(View):
+    def get(self, request):
+        return HttpResponse("Edit and Delete Page")
