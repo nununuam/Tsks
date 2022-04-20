@@ -1,27 +1,23 @@
 from django.shortcuts import render
 from django.views import View 
 from django.http import HttpResponse 
+from django.views.generic.base import TemplateView
 
 
 # Create your views here.
 
 
-class Home(View):
-    def get(self, request):
-        return HttpResponse("Welcome to Tsks")
+class Home(TemplateView):
+    template_name = "home.html"
 
-class Tasks(View):
-    def get(self, request):
-        return HttpResponse("Tasks Page")
+class Tasks(TemplateView):
+     template_name = "tasks.html"
 
-class addCategories(View):
-    def get(self, request):
-        return HttpResponse("New Categories")
+class addCategories(TemplateView):
+     template_name = "addCategories.html"
         
-class NewTask(View):
-    def get(self, request):
-        return HttpResponse("New Task Page")
+class NewTask(TemplateView):
+    template_name = "newTasks.html"
 
-class editAndDelete(View):
-    def get(self, request):
-        return HttpResponse("Edit and Delete Page")
+class editAndDelete(TemplateView):
+     template_name = "editAndDelete.html"
