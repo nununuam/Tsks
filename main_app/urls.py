@@ -10,5 +10,5 @@ urlpatterns = [
     path('addCategories/', views.addCategories.as_view(), name="categories"),
     path('newTask/', views.NewTask.as_view(), name="newTask"),
     path('editAndDelete/', views.editAndDelete.as_view(), name="editAndDelete"),
-    path('cats/', views.CatList.as_view(), name="cat-list"),
+   # path('cats/', views.CatList.as_view(), name="cat-list"),
 ]
