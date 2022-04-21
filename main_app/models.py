@@ -21,8 +21,8 @@ class Categories(models.Model):
     )
 
 class Task(models.Model):
-    categories = models.ManyToManyField(Categories)
     title = models.CharField(max_length = 60)
+    categories = models.ManyToManyField(Categories)
     discription = models.CharField(max_length = 250)
     date_time = models.DateTimeField()
     complete = models.BooleanField(default=False)

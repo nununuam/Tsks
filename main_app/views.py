@@ -49,12 +49,21 @@ class Tasks(TemplateView):
          title = self.request.GET.get("title")
          context["tasks"] = Task.objects.all()
          return context
-
-class addCategories(TemplateView):
-     template_name = "addCategories.html"
-        
 class NewTask(TemplateView):
-    template_name = "newTasks.html"
+    model = Task
+    fields = ['title', 'categories', 'discription', 'date_time', 'complete']
+    template_name = "newTask.html"
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.user = self.request.user
+        self.object.save()
+
+        return HttpResponseRedirect('/tasks')
 
 class editAndDelete(TemplateView):
      template_name = "editAndDelete.html"
+
+#class addCategories(TemplateView):
+ #    template_name = "addCategories.html"
+        
