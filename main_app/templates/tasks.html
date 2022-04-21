@@ -7,5 +7,12 @@
 {% endblock %}
 
 {% block content %}  
-    <h1>display task</h1>
+    <h1>Tasks:</h1>
+    {% for task in tasks %}
+    <h3>Title: {{task.title}}</h3>
+    <h3>Categories: {{task.categories}}</h3>
+    <h3>Discription: {{task.discription}}</h3>
+    <h3>By: {{task.date_time}}</h3>
+    <h3>Completed: {{task.complete}}</h3>
+    {% endfor %}
 {% endblock %}

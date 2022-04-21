@@ -46,7 +46,8 @@ class Tasks(TemplateView):
      template_name = "tasks.html"
      def get_context_data(self, **kwargs):
          context = super().get_context_data(**kwargs)
-         context["task"] = Task.object.all()
+         title = self.request.GET.get("title")
+         context["tasks"] = Task.objects.all()
          return context
 
 class addCategories(TemplateView):
