@@ -1,0 +1,6 @@
+INSERT INTO main_app_tsks(title, discription, date_time, complete)
+VALUES ('workout', "walk around the apt", 2022-05-18 11:30:58, False)
+INSERT INTO main_app_tsks(title, discription, date_time, complete)
+VALUES ('Reading', "Waching a movie", 2022-06-18 11:30:58, False)
+INSERT INTO main_app_tsks(title, discription, date_time, complete)
+VALUES ('Movies', "Still not reading", 2022-07-18 11:30:58, False)
