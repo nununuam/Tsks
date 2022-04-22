@@ -63,16 +63,25 @@ class NewTask(CreateView):
 
         return HttpResponseRedirect('/tasks')
 
-Class TaskDetail(DetailView):
+class TaskDetail(DetailView):
+    model = Task
     template_name = "taskDetail.html"
 
-class Update(UpdateView):
+class TaskUpdate(UpdateView):
     template_name = "update.html"
     model = Task
     fields = ['title', 'categories', 'discription', 'date_time', 'complete']
 
     def get_success_url(self):
-        return reverse('cat_detail', kwargs={'pk': self.object.pk})
+        return reverse('taskDetail', kwargs={'pk': self.object.pk})
+
+
+class TaskDelete(DeleteView):
+    model = Cat
+    template_name = 'taskDeleted.html'
+    success_url = "/tasks/"
+
+
 #class addCategories(TemplateView):
  #    template_name = "addCategories.html"
         
