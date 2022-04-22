@@ -19,6 +19,10 @@ class Categories(models.Model):
         max_length=16,
         choices=CATEGORIES,
     )
+    
+    def __str__(self):
+        return self.categories
+
 
 class Task(models.Model):
     title = models.CharField(max_length = 60)

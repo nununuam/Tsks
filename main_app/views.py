@@ -48,8 +48,10 @@ class Tasks(TemplateView):
          context = super().get_context_data(**kwargs)
          title = self.request.GET.get("title")
          context["tasks"] = Task.objects.all()
+         print(context['tasks'])
          return context
-class NewTask(TemplateView):
+
+class NewTask(CreateView):
     model = Task
     fields = ['title', 'categories', 'discription', 'date_time', 'complete']
     template_name = "newTask.html"
@@ -61,9 +63,16 @@ class NewTask(TemplateView):
 
         return HttpResponseRedirect('/tasks')
 
-class editAndDelete(TemplateView):
-     template_name = "editAndDelete.html"
+Class TaskDetail(DetailView):
+    template_name = "taskDetail.html"
 
+class Update(UpdateView):
+    template_name = "update.html"
+    model = Task
+    fields = ['title', 'categories', 'discription', 'date_time', 'complete']
+
+    def get_success_url(self):
+        return reverse('cat_detail', kwargs={'pk': self.object.pk})
 #class addCategories(TemplateView):
  #    template_name = "addCategories.html"
         
