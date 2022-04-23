@@ -7,8 +7,9 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', views.Home.as_view(), name="home"),
     path('tasks/', views.Tasks.as_view(), name="tasks"),
-    path('addCategories/', views.addCategories.as_view(), name="categories"),
-    path('newTask/', views.NewTask.as_view(), name="newTask"),
-    path('editAndDelete/', views.editAndDelete.as_view(), name="editAndDelete"),
-    path('cats/', views.CatList.as_view(), name="cat-list"),
+    path('tasks/new/', views.NewTask.as_view(), name="newTask"),
+    path('tasks/<int:pk>', views.TaskDetail.as_view(), name="taskDetail"),
+    path('tasks/<int:pk>/update', views.TaskUpdate.as_view(), name="taskUpdate"),
+    path('tasks/<int:pk>/delete', views.TaskDelete.as_view(), name="taskDelete"),
+    #path('addCategories/', views.addCategories.as_view(), name="categories"),
 ]
