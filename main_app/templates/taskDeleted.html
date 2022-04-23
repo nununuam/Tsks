@@ -1,10 +1,14 @@
-<h1>Are you sure you want to delete {{Task.title}}?</h1>
-<form method="post">
-  {% csrf_token %}
-  <div>
-   <!-- confirm cat delete -->
-    <input type="submit" value="Confirm" />
-    <!-- Redirect back to detail on cancel -->
-    <a href="{% url 'taskDetail' task.pk %}">Cancel</a>
-  </div>
-</form>
+{% extends 'base.html' %} 
+{% block content %}  
+    <h1>Are you sure you want to delete {{task.title}}?</h1>
+    <form method="post">
+    {% csrf_token %}
+    <div>
+    <!-- confirm cat delete -->
+        <input type="submit" value="Confirm" />
+        <!-- Redirect back to detail on cancel -->
+        <button><a href="{% url 'taskDetail' task.pk %}">Cancel</a></button>
+    </div>
+    </form>
+{% endblock %}
+
