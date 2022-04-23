@@ -61,7 +61,6 @@ class TaskDelete(DeleteView):
     template_name = 'taskDeleted.html'
     success_url = "/tasks/"
 
-
 #class addCategories(TemplateView):
  #    template_name = "addCategories.html"
         
