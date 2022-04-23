@@ -12,5 +12,4 @@ urlpatterns = [
     path('tasks/<int:pk>/update', views.TaskUpdate.as_view(), name="taskUpdate"),
     path('tasks/<int:pk>/delete', views.TaskDelete.as_view(), name="taskDelete"),
     #path('addCategories/', views.addCategories.as_view(), name="categories"),
-   # path('cats/', views.CatList.as_view(), name="cat-list"),
 ]

@@ -19,25 +19,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 # Create your views here.
-"""class Cat:
-    def __init__(self, name, age, gender):
-        self.name = name
-        self.age = age
-        self.gender = gender
-
-cats = [
-    Cat("Mau", 5, "Female"),
-    Cat("Garfield", 43, "Male"),
-    Cat("Meowth", 25, "Male"),
-    Cat("Salem", 500, "Male"),
-]
-
-class CatList(TemplateView):
-    template_name = 'catlist.html'
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["cats"] = cats # this is where we add the key into our context object for the view to use
-        return context"""
 
 class Home(TemplateView):
     template_name = "home.html"
