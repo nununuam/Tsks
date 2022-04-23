@@ -12,13 +12,11 @@
         <a href="{% url 'taskDetail' task.pk %}">
             <h3>Title: {{task.title}}</h3>
         </a>
-        <h3>Categories:</h3>
-            <ul>{% for category in task.categories.all%}
-                {{category.categories}} |
-            {% endfor %}
-            </ul>
         <h3>Discription: {{task.discription}}</h3>
         <h3>Due by: {{task.time}} {{task.date}}</h3>
         <h3>Completed: {{task.complete}}</h3>
+        <h3>Categories: {% for category in task.categories.all%}
+            {{category.categories}} |
+        {% endfor %}</h3>
     {% endfor %}
 {% endblock %}

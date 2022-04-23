@@ -1,16 +1,24 @@
 {% extends 'base.html' %} 
+
+{% block title %}
+{% endblock %}
+
+{% block nav %}  
+{% endblock %}
+
 {% block content %}  
-    <h1>{{Task.title}}</h1>
     <div>
         <h3>Title: {{task.title}}</h3>
+        <h3>Categories:</h3>
+        <h3>Discription: {{task.discription}}</h3>
+        <h3>Due by: {{task.time}} {{task.date}}</h3>
+        <h3>Completed: {{task.complete}}</h3>
         <h3>Categories:</h3>
             <ul>{% for category in task.categories.all%}
                 {{category.categories}} |
             {% endfor %}
             </ul>
-        <h3>Discription: {{task.discription}}</h3>
-        <h3>Due by: {{task.time}} {{task.date}}</h3>
-        <h3>Completed: {{task.complete}}</h3>
+        <p>Created on {{task.createdDate}}</p>
     </div>
     <div>
         <button><a href="{% url 'taskUpdate' task.pk %}">Edit Task</a></button>
