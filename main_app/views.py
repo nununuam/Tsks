@@ -53,7 +53,7 @@ class Tasks(TemplateView):
 
 class NewTask(CreateView):
     model = Task
-    fields = ['title', 'categories', 'discription', 'date_time', 'complete']
+    fields = ['title', 'categories', 'discription', 'date', 'time', 'complete']
     template_name = "newTask.html"
 
     def form_valid(self, form):
@@ -70,7 +70,7 @@ class TaskDetail(DetailView):
 class TaskUpdate(UpdateView):
     template_name = "taskUpdate.html"
     model = Task
-    fields = ['title', 'categories', 'discription', 'date_time', 'complete']
+    fields = ['title', 'categories', 'discription', 'date', 'time', 'complete']
 
     def get_success_url(self):
         return reverse('taskDetail', kwargs={'pk': self.object.pk})
