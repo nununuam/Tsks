@@ -75,9 +75,8 @@ class TaskUpdate(UpdateView):
     def get_success_url(self):
         return reverse('taskDetail', kwargs={'pk': self.object.pk})
 
-
 class TaskDelete(DeleteView):
-    model = Cat
+    model = Task
     template_name = 'taskDeleted.html'
     success_url = "/tasks/"
 
