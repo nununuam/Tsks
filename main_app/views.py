@@ -68,7 +68,7 @@ class TaskDetail(DetailView):
     template_name = "taskDetail.html"
 
 class TaskUpdate(UpdateView):
-    template_name = "update.html"
+    template_name = "taskUpdate.html"
     model = Task
     fields = ['title', 'categories', 'discription', 'date_time', 'complete']
 
