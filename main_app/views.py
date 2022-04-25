@@ -69,4 +69,17 @@ def Profile(request, username):
     tasks = Task.objects.filter(user=user)
     return render(request, 'profile.html', {'username': username, 'tasks': task})
 
-        
+#Django Auth
+def signup(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            print('HEY', user.username)
+            return HttpResponseRedirect('/user/'+str(user))
+        else:
+            return render(request, 'signup.html', {'form': form})    
+    else:
+        form = UserCreationForm()
+        return render(request, 'signup.html', {'form': form})
