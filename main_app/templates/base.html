@@ -20,6 +20,9 @@
         <span> | </span>
         <a href="/accounts/logout">Logout</a>
         <span> | </span>
+        <a href="/tasks">All tasks</a>
+        <span> | </span>
+        <a href="/tasks/new">Add Task</a>
         {% else %}
         <span><a href="{% url 'login' %}">Login</a></span>
         <span> | </span>
@@ -28,11 +31,7 @@
         {% endif %}
         <a href="/">Home</a>
         <span> | </span>
-        <a href="/tasks">All tasks</a>
-        <span> | </span>
         <a href="/admin">Admin</a>
-        <span> | </span>
-        <a href="/tasks/new">Add Task</a>
     </nav>
     {% block nav %}  
     {% endblock %}
