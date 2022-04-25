@@ -5,8 +5,8 @@
 <h1>{{username}}'s collection:</h1>
 
 {% for task in tasks %}
-<a href="/task/{{task.id}}">
-    <h3>{{task.title}}</h3>
+<a href="{% url 'taskDetail' task.pk %}">
+    <h3>Title: {{task.title}}</h3>
 </a>
 {% endfor %}
 
