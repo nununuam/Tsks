@@ -23,7 +23,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 class Home(TemplateView):
     template_name = "home.html"
 
-@method_decorator(login_required, name="dispatch")
+#@method_decorator(login_required, name="dispatch")
 class Tasks(TemplateView):
      template_name = "tasks.html"
      def get_context_data(self, **kwargs):
@@ -33,7 +33,7 @@ class Tasks(TemplateView):
          print(context['tasks'])
          return context
 
-@method_decorator(login_required, name="dispatch")
+#@method_decorator(login_required, name="dispatch")
 class NewTask(LoginRequiredMixin, CreateView):
     model = Task
     fields = ['title', 'categories', 'discription', 'date', 'time', 'complete']
@@ -46,12 +46,12 @@ class NewTask(LoginRequiredMixin, CreateView):
 
         return HttpResponseRedirect('/tasks')
         
-@method_decorator(login_required, name="dispatch")
+#@method_decorator(login_required, name="dispatch")
 class TaskDetail(DetailView):
     model = Task
     template_name = "taskDetail.html"
 
-@method_decorator(login_required, name="dispatch")
+#@method_decorator(login_required, name="dispatch")
 class TaskUpdate(UpdateView):
     template_name = "taskUpdate.html"
     model = Task
@@ -60,13 +60,13 @@ class TaskUpdate(UpdateView):
     def get_success_url(self):
         return reverse('taskDetail', kwargs={'pk': self.object.pk})
 
-@method_decorator(login_required, name="dispatch")
+#@method_decorator(login_required, name="dispatch")
 class TaskDelete(DeleteView):
     model = Task
     template_name = 'taskDeleted.html'
     success_url = "/tasks/"
 
-@login_required
+#@login_required
 def Profile(request, username):
     user = User.objects.get(username=username)
     tasks = Task.objects.filter(user=user)
