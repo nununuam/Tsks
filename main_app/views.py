@@ -31,6 +31,8 @@ class Tasks(TemplateView):
          context["tasks"] = Task.objects.all()
          print(context['tasks'])
          return context
+    def get_success_url(self):
+        return reverse('newTask', kwargs={'pk': self.object.pk})
 
 class NewTask(LoginRequiredMixin, CreateView):
     model = Task
