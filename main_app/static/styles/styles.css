@@ -3,5 +3,10 @@ h1 {
 }
 
 body {
-    background-color: powderblue; 
-    text-align: center;}
+    background-color: #0d0c0c; 
+    text-align: center;
+    color: #E5E5E5;
+}
+.navigation{
+    color:#989090; 
+}
