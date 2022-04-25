@@ -13,4 +13,5 @@ urlpatterns = [
     path('tasks/<int:pk>/delete', views.TaskDelete.as_view(), name="taskDelete"),
     path('user/<username>', views.Profile, name='profile'),
     path('login/', views.login, name='login'),
+     path('logout/', views.logout, name='logout'),
 ]
