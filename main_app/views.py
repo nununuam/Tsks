@@ -83,3 +83,7 @@ def signup(request):
     else:
         form = UserCreationForm()
         return render(request, 'signup.html', {'form': form})
+
+def logout_view(request):
+    logout(request)
+    return HttpResponseRedirect('/')
