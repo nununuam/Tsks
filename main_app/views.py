@@ -23,6 +23,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 class Home(TemplateView):
     template_name = "home.html"
 
+@method_decorator(login_required, name="dispatch")
 class Tasks(TemplateView):
      template_name = "tasks.html"
      def get_context_data(self, **kwargs):
@@ -32,6 +33,7 @@ class Tasks(TemplateView):
          print(context['tasks'])
          return context
 
+@method_decorator(login_required, name="dispatch")
 class NewTask(LoginRequiredMixin, CreateView):
     model = Task
     fields = ['title', 'categories', 'discription', 'date', 'time', 'complete']
@@ -43,7 +45,8 @@ class NewTask(LoginRequiredMixin, CreateView):
         self.object.save()
 
         return HttpResponseRedirect('/tasks')
-
+        
+@method_decorator(login_required, name="dispatch")
 class TaskDetail(DetailView):
     model = Task
     template_name = "taskDetail.html"
