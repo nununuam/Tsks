@@ -23,6 +23,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 class Home(TemplateView):
     template_name = "home.html"
 
+#@method_decorator(login_required, name="dispatch")
 class Tasks(TemplateView):
      template_name = "tasks.html"
      def get_context_data(self, **kwargs):
@@ -31,9 +32,8 @@ class Tasks(TemplateView):
          context["tasks"] = Task.objects.all()
          print(context['tasks'])
          return context
-    def get_success_url(self):
-        return reverse('newTask', kwargs={'pk': self.object.pk})
 
+#@method_decorator(login_required, name="dispatch")
 class NewTask(LoginRequiredMixin, CreateView):
     model = Task
     fields = ['title', 'categories', 'discription', 'date', 'time', 'complete']
@@ -45,12 +45,13 @@ class NewTask(LoginRequiredMixin, CreateView):
         self.object.save()
 
         return HttpResponseRedirect('/tasks')
-
+        
+#@method_decorator(login_required, name="dispatch")
 class TaskDetail(DetailView):
     model = Task
     template_name = "taskDetail.html"
 
-@method_decorator(login_required, name="dispatch")
+#@method_decorator(login_required, name="dispatch")
 class TaskUpdate(UpdateView):
     template_name = "taskUpdate.html"
     model = Task
@@ -59,16 +60,56 @@ class TaskUpdate(UpdateView):
     def get_success_url(self):
         return reverse('taskDetail', kwargs={'pk': self.object.pk})
 
-@method_decorator(login_required, name="dispatch")
+#@method_decorator(login_required, name="dispatch")
 class TaskDelete(DeleteView):
     model = Task
     template_name = 'taskDeleted.html'
     success_url = "/tasks/"
 
-@login_required
+#@login_required
 def Profile(request, username):
     user = User.objects.get(username=username)
     tasks = Task.objects.filter(user=user)
     return render(request, 'profile.html', {'username': username, 'tasks': tasks})
 
-        
+#Django Auth
+def signup(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            print('HEY', user.username)
+            return HttpResponseRedirect('/user/'+str(user))
+        else:
+            return render(request, 'signup.html', {'form': form})    
+    else:
+        form = UserCreationForm()
+        return render(request, 'signup.html', {'form': form})
+
+#def logout(request):
+#    logout(request)
+ #   return HttpResponseRedirect('/')
+
+#def login(request):
+ #   if request.method == 'POST':
+  #      form = AuthenticationForm(request, request.POST)
+   #     if form.is_valid():
+    #        u = form.cleaned_data['username']
+     #       p = form.cleaned_data['password']
+      #
+      #     if user is not None:
+       #         if user.is_active:
+        #            login(request, user)
+         #           return HttpResponseRedirect('/user/'+u)
+          #      else:
+           #         print('The account has been disabled.')
+            #        return render(request, 'login.html', {'form': form})
+            #else:
+             #   print('The username and/or password is incorrect.')
+              #  return render(request, 'login.html', {'form': form})
+ #       else: 
+  #          return render(request, 'signup.html', {'form': form})
+   # else: 
+    #    form = AuthenticationForm()
+#        return render(request, 'login.html', {'form': form})
