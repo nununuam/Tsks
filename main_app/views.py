@@ -67,7 +67,7 @@ class TaskDelete(DeleteView):
 def Profile(request, username):
     user = User.objects.get(username=username)
     tasks = Task.objects.filter(user=user)
-    return render(request, 'profile.html', {'username': username, 'tasks': task})
+    return render(request, 'profile.html', {'username': username, 'tasks': tasks})
 
 #Django Auth
 def signup(request):
