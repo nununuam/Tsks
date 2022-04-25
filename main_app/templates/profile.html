@@ -2,6 +2,7 @@
 
 {% block content %}
 
+
 <h1>{{username}}'s collection:</h1>
 
 {% for task in tasks %}
@@ -9,5 +10,6 @@
     <h3>Title: {{task.title}}</h3>
 </a>
 {% endfor %}
+
 
 {% endblock %}
