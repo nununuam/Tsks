@@ -32,7 +32,7 @@ class Tasks(TemplateView):
          print(context['tasks'])
          return context
 
-class NewTask(CreateView):
+class NewTask(LoginRequiredMixin, CreateView):
     model = Task
     fields = ['title', 'categories', 'discription', 'date', 'time', 'complete']
     template_name = "newTask.html"
@@ -48,6 +48,7 @@ class TaskDetail(DetailView):
     model = Task
     template_name = "taskDetail.html"
 
+@method_decorator(login_required, name="dispatch")
 class TaskUpdate(UpdateView):
     template_name = "taskUpdate.html"
     model = Task
@@ -56,11 +57,16 @@ class TaskUpdate(UpdateView):
     def get_success_url(self):
         return reverse('taskDetail', kwargs={'pk': self.object.pk})
 
+@method_decorator(login_required, name="dispatch")
 class TaskDelete(DeleteView):
     model = Task
     template_name = 'taskDeleted.html'
     success_url = "/tasks/"
 
-#class addCategories(TemplateView):
- #    template_name = "addCategories.html"
+@login_required
+def Profile(request, username):
+    user = User.objects.get(username=username)
+    tasks = Task.objects.filter(user=user)
+    return render(request, 'profile.html', {'username': username, 'tasks': tasks})
+
         
