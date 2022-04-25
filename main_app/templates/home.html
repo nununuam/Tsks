@@ -8,5 +8,9 @@
 {% endblock %}
 
 {% block content %}  
-    <h1>home page</h1>
+    <h1>Welcome to Tsks!</h1>
+    <p>Join Tsks</p>
+    <button><a href="{% url 'signup' task.pk %}">SignUp</a></button>
+    <p>Have account already?</p>
+    <button><a href="{% url 'login' task.pk %}">Login</a></button>
 {% endblock %}
