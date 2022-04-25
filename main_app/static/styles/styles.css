@@ -1,5 +1,5 @@
 h1 {
-    color: green;
+    color: #E5E5E5;
 }
 
 body {
@@ -7,6 +7,6 @@ body {
     text-align: center;
     color: #E5E5E5;
 }
-.navigation{
+nav a {
     color:#989090; 
 }
