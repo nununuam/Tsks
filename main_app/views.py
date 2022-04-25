@@ -31,8 +31,6 @@ class Tasks(TemplateView):
          context["tasks"] = Task.objects.all()
          print(context['tasks'])
          return context
-    def get_success_url(self):
-        return reverse('newTask', kwargs={'pk': self.object.pk})
 
 class NewTask(LoginRequiredMixin, CreateView):
     model = Task
@@ -69,6 +67,6 @@ class TaskDelete(DeleteView):
 def Profile(request, username):
     user = User.objects.get(username=username)
     tasks = Task.objects.filter(user=user)
-    return render(request, 'profile.html', {'username': username, 'tasks': tasks})
+    return render(request, 'profile.html', {'username': username, 'tasks': task})
 
         
