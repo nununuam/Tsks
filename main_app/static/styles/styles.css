@@ -58,3 +58,13 @@ a:hover {
 div img {
     border-radius: 2%;
 }
+
+.tasks {
+    display: grid;
+    grid-template-columns: repeat(5, 4fr);
+    grid-auto-rows: 30px;
+    margin-top: 10%;
+    text-align: -webkit-left;
+    margin-left: 5%;
+    margin-bottom: 10%;
+}
