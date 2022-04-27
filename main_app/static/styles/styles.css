@@ -100,3 +100,14 @@ div img {
     margin-left: 5%;
     margin-bottom: 10%;
 }
+div .profiletasks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 80%;
+    text-align: center;
+}
+
+.profile {
+    border-top: 1px solid #dfdfdf;
+    margin-top: 5%;
+}

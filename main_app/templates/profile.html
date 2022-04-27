@@ -3,7 +3,7 @@
 {% block content %}
     <div class ="profile">
         <h1>{{username}}'s collection:</h1>
-        <div class="profiletask">
+        <div class="profiletasks">
             {% for task in tasks %}
             <a href="{% url 'taskDetail' task.pk %}">
                 <h3>{{task.title}}</h3>
