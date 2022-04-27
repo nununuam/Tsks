@@ -9,21 +9,23 @@
 {% endblock %}
 
 {% block content %}  
-    <div>
-        <h3>Title: {{task.title}}</h3>
-        <h3>Categories:</h3>
-        <h3>Discription: {{task.discription}}</h3>
-        <h3>Due by: {{task.time}} {{task.date}}</h3>
-        <h3>Completed: {{task.complete}}</h3>
-        <h3>Categories:</h3>
-            <ul>{% for category in task.categories.all%}
-                {{category.categories}} |
-            {% endfor %}
-            </ul>
-        <p>Created on {{task.createdDate}}</p>
-    </div>
-    <div>
-        <button><a href="{% url 'taskUpdate' task.pk %}">Edit Task</a></button>
-        <button><a href="{% url 'taskDelete' task.pk %}">Delete Task</a></button>
+    <div class = "detailpg">
+        <div>
+            <h3>Title: {{task.title}}</h3>
+            <h3>Categories:</h3>
+            <h3>Discription: {{task.discription}}</h3>
+            <h3>Due by: {{task.time}} {{task.date}}</h3>
+            <h3>Completed: {{task.complete}}</h3>
+            <h3>Categories:</h3>
+                <ul>{% for category in task.categories.all%}
+                    {{category.categories}} |
+                {% endfor %}
+                </ul>
+            <p>Created on {{task.createdDate}}</p>
+        </div>
+        <div>
+            <span class = "spanbuttons"><a href="{% url 'taskUpdate' task.pk %}">Edit Task</a></span>
+            <span class = "spanbuttons"><a href="{% url 'taskDelete' task.pk %}">Delete Task</a></span>
+        </div>
     </div>
 {% endblock %}

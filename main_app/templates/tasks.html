@@ -9,16 +9,28 @@
 {% endblock %}
 
 {% block content %}  
-    <h1>Tasks:</h1>
+    <div class ="tasksh1">
+        <h1>T - a - s - k - s :</h1>
+    </div>
+
+    <div class="tasksTitle">
+        <h4>Title: </h4>
+        <h4>Discription: </h4>
+        <h4>Due by: </h4>
+        <h4>Categories: </h4>
+        <h4>Completed: </h4>
+    </div>
     {% for task in tasks %}
-        <a href="{% url 'taskDetail' task.pk %}">
-            <h3>Title: {{task.title}}</h3>
-        </a>
-        <h3>Discription: {{task.discription}}</h3>
-        <h3>Due by: {{task.time}} {{task.date}}</h3>
-        <h3>Completed: {{task.complete}}</h3>
-        <h3>Categories: {% for category in task.categories.all%}
-            {{category.categories}} |
-        {% endfor %}</h3>
+        <div class="tasks">
+            <a href="{% url 'taskDetail' task.pk %}">
+                <h3>{{task.title}}</h3>
+            </a>
+            <h5>{{task.discription}}</h5>
+            <h5>{{task.time}} {{task.date}}</h5>
+            <h5>{% for category in task.categories.all%}
+                {{category.categories}} |
+            {% endfor %}</h5>
+            <h5>{{task.complete}}</h5>
+        </div>
     {% endfor %}
 {% endblock %}

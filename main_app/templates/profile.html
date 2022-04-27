@@ -1,15 +1,15 @@
 {% extends 'base.html'%}
 
 {% block content %}
-
-
-<h1>{{username}}'s collection:</h1>
-
-{% for task in tasks %}
-<a href="{% url 'taskDetail' task.pk %}">
-    <h3>Title: {{task.title}}</h3>
-</a>
-{% endfor %}
-
-
+    <div class ="profile">
+        <h1>{{username}}'s collection:</h1>
+        <div class="profiletasks">
+            {% for task in tasks %}
+            <a href="{% url 'taskDetail' task.pk %}">
+                <h3>{{task.title}}</h3>
+                <h5>{{task.createdDate}}</h5>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
