@@ -2,14 +2,18 @@
 {% load static %}
 {% block content %}
 <div class="updatetask">
+    
     <h1>Update {{Task.title}}</h1>
-
-    <form action="" method="post">
-    {% csrf_token %} 
-    {{form.as_p}} 
-    <input type="submit" value="Submit" />
-    </form>
-    <a href="{% url 'taskDetail' task.pk %}">Cancel</a>
+    <div class="updatetask1">
+        <form action="" method="post">
+            {% csrf_token %} 
+            {{form.as_p}} 
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+    <div class="updatetask2">
+        <a href="{% url 'taskDetail' task.pk %}">Cancel</a>
+    </div>
 </div>
 
 {% endblock %}
