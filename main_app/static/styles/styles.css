@@ -54,3 +54,7 @@ a:hover {
     text-align:-webkit-right;
     margin-right:15%;
 }
+
+div img {
+    border-radius: 2%;
+}
