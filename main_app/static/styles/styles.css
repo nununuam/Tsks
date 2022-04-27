@@ -7,6 +7,7 @@ body {
     text-align: center;
     color: #E5E5E5;
 }
+
 nav a{
     color:#E5E5E5;
     display: inline-flex;
@@ -14,4 +15,5 @@ nav a{
 }
 p {
     color: #989090;
+
 }
