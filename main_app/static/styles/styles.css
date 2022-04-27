@@ -10,7 +10,11 @@ body {
 nav a{
     color:#E5E5E5;
     display: inline-flex;
-    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    align-items: center;
+    min-height: 8vh;
 }
 p {
     color: #989090;

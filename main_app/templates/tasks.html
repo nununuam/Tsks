@@ -9,16 +9,19 @@
 {% endblock %}
 
 {% block content %}  
+
     <h1>Tasks:</h1>
     {% for task in tasks %}
-        <a href="{% url 'taskDetail' task.pk %}">
-            <h3>Title: {{task.title}}</h3>
-        </a>
-        <h3>Discription: {{task.discription}}</h3>
-        <h3>Due by: {{task.time}} {{task.date}}</h3>
-        <h3>Completed: {{task.complete}}</h3>
-        <h3>Categories: {% for category in task.categories.all%}
-            {{category.categories}} |
-        {% endfor %}</h3>
+         <div>
+            <a href="{% url 'taskDetail' task.pk %}">
+                <h3>Title: {{task.title}}</h3>
+            </a>
+            <h5>Discription: {{task.discription}}</h5>
+            <h5>Due by: {{task.time}} {{task.date}}</h5>
+            <h5>Completed: {{task.complete}}</h5>
+            <h5>Categories: {% for category in task.categories.all%}
+                {{category.categories}} |
+            {% endfor %}</h5>
+         </div>
     {% endfor %}
 {% endblock %}
