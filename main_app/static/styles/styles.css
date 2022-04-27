@@ -20,7 +20,7 @@ nav a{
 }
 
 button {
-    margin-top: 20px;
+    margin-top: 5%;
     margin-left: 5%;
 }
 
@@ -60,7 +60,7 @@ div img {
 }
 
 .tasksh1 {
-    margin-top: 10%;
+    margin-top: 5%;
     font-size: larger;
     color: transparent;
     text-transform: uppercase;
@@ -85,7 +85,7 @@ div img {
     display: grid;
     grid-template-columns: repeat(5, 4fr);
     grid-auto-rows: 30px;
-    margin-top: 10%;
+    margin-top: 5%;
     text-align: -webkit-left;
     margin-left: 5%;
     font-size:large;
