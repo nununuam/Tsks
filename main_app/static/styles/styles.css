@@ -1,5 +1,5 @@
 h1 {
-    color: green;
+    color: #E5E5E5;
 }
 
 body {
@@ -7,6 +7,11 @@ body {
     text-align: center;
     color: #E5E5E5;
 }
-.navigation{
-    color:#989090; 
+nav a{
+    color:#E5E5E5;
+    display: inline-flex;
+    justify-content: space-between;
+}
+p {
+    color: #989090;
 }
