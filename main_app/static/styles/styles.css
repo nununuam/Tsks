@@ -111,3 +111,20 @@ div .profiletasks {
     border-top: 1px solid #dfdfdf;
     margin-top: 5%;
 }
+
+.newtask {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 80%;
+    text-align: left;
+    margin-top: 5%;
+    font-size: large;
+    margin-left: 10%;
+}
+.newtaskh1 {
+    margin-left: 25%;
+    font-size: x-large;
+}
+.newtaskfillin {
+    margin-top: 20%;
+}

@@ -1,21 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
-
-
-{% block title %}
-{% endblock %}
-
-{% block nav %}  
-{% endblock %}
-
 {% block content %}  
-<h1>Update {{Task.title}}</h1>
+    <h1>Update {{Task.title}}</h1>
 
-<form action="" method="post">
-  {% csrf_token %} 
-  {{form.as_p}} 
-  <input type="submit" value="Submit" />
-</form>
-<button><a href="{% url 'taskDetail' task.pk %}">Cancel</a></button>
+    <form action="" method="post">
+    {% csrf_token %} 
+    {{form.as_p}} 
+    <input type="submit" value="Submit" />
+    </form>
+    <button><a href="{% url 'taskDetail' task.pk %}">Cancel</a></button>
 
 {% endblock %}
