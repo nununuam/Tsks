@@ -58,6 +58,29 @@ a:hover {
 div img {
     border-radius: 2%;
 }
+
+.tasksh1 {
+    margin-top: 10%;
+    font-size: larger;
+    color: transparent;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #6e4f4f, #bc6b6b, #61809c, #96619c, #9c6161, #659c61, #9c9661, #9c7461);
+    background-clip: text;
+    animation: animate 20s linear infinite;
+    background-size: 1000%;;
+}
+@keyframes animate
+{
+    0% {
+        background-position: 0% 100%;
+    }
+    30% {
+        background-position: 100% 0%;
+    }
+    60% {
+        background-position: 0% 100%;
+    }
+}
 .tasksTitle {
     display: grid;
     grid-template-columns: repeat(5, 4fr);
