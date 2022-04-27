@@ -16,23 +16,16 @@
 <body>
     <nav class="navigation">
         {% if user.is_authenticated %}
-        <a href="/user/{{user.username}}">Hello, {{user.username}}!</a>
-        <span> | </span>
-        <a href="/accounts/logout">Logout</a>
-        <span> | </span>
-        <a href="/tasks">All tasks</a>
-        <span> | </span>
-        <a href="/tasks/new">Add Task</a>
+        <button><a href="/user/{{user.username}}">Hello, {{user.username}}!</a></button>
+        <button><a href="/accounts/logout">Logout</a></button>
+        <button><a href="/tasks">All tasks</a></button>
+        <button><a href="/tasks/new">Add Task</a></button>
         {% else %}
-        <span><a href="{% url 'login' %}">Login</a></span>
-        <span> | </span>
-        <span><a href="{% url 'signup' %}">SignUp</a></span>
-        <span> | </span>
+        <button><span><a href="{% url 'login' %}">Login</a></span></button>
+        <button><span><a href="{% url 'signup' %}">SignUp</a></span></button>
         {% endif %}
-        <span> | </span>
-        <a href="/">Home</a>
-        <span> | </span>
-        <a href="/admin">Admin</a>
+        <button><a href="/">Home</a></button>
+        <button><a href="/admin">Admin</a></button>
 
     </nav>
     {% block nav %}  

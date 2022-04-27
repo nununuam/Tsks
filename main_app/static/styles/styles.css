@@ -9,12 +9,14 @@ body {
 }
 
 nav a{
-    color:#E5E5E5;
+    color:#6c3737;
     display: inline-flex;
     position: sticky;
     top: 0px;
     align-items: center;
-    min-height: 8vh;
+    min-height: 6vh;
+    margin-left: 10px ;
+    margin-right: 10px;
 }
 p {
     color: #989090;
