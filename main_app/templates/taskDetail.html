@@ -24,8 +24,8 @@
             <p>Created on {{task.createdDate}}</p>
         </div>
         <div>
-            <button><a href="{% url 'taskUpdate' task.pk %}">Edit Task</a></button>
-            <button><a href="{% url 'taskDelete' task.pk %}">Delete Task</a></button>
+            <span class = "spanbuttons"><a href="{% url 'taskUpdate' task.pk %}">Edit Task</a></span>
+            <span class = "spanbuttons"><a href="{% url 'taskDelete' task.pk %}">Delete Task</a></span>
         </div>
     </div>
 {% endblock %}

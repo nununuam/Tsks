@@ -14,9 +14,9 @@
     {% csrf_token %}
     <div>
     <!-- confirm cat delete -->
-        <input type="submit" value="Confirm" />
+        <button>Confirm</button>
         <!-- Redirect back to detail on cancel -->
-        <button><a href="{% url 'taskDetail' task.pk %}">Cancel</a></button>
+        <a href="{% url 'taskDetail' task.pk %}"><button>Cancel</button></a>
     </div>
     </form>
 {% endblock %}
